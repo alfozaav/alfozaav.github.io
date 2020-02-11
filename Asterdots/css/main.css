@@ -115,6 +115,7 @@ footer .footer-form .footer-button button{
         grid-template: 1fr 2fr / 100%;
         justify-content: center;
         align-items: center;
+        height: auto;
     }
     .container .hero span{
         text-align: center;
