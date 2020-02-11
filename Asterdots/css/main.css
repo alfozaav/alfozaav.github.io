@@ -1,0 +1,437 @@
+/*--ALL--*/
+:root {
+    --azul-fuerte: #1e1a34;
+    --azul-claro: #B9D9EB;
+    --gris-claro: #D3D1D1;
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    font-family: 'Opens Sans', sans-serif;
+    font-size: 16px;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: 'Russo One', sans-serif;
+}
+/*--HEADER--*/
+header {
+    background: var( --azul-fuerte);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4em;
+    position: sticky;
+}
+header h1 {
+    color: var(--azul-claro);
+}
+/*--HERO--*/
+.container .hero {
+    background-image: url(/img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.container .hero span{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+}
+.container .hero .hero-form{
+    background: white;
+    color: var(--gris-claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .hero .hero-form span {
+    color: var(--azul-fuerte);
+}
+.container .hero .hero-form input,
+.container .hero .hero-form textarea{
+    background: var(--gris-claro);
+    border: none;
+}
+.container .hero .hero-form button {
+    background: var(--azul-claro);
+    border: none;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+}
+.container .hero .hero-form .button-input button:hover {
+    background: #555555;
+}
+.container .hero .hero-form .button-input button:active {
+    background: #333333;
+}
+.container .hero .hero-form form .name-input input:active,
+.container .hero .hero-form form .email-input input:active,
+.container .hero .hero-form form .message-input textarea:active {
+    border: none;
+}
+/*--SERVICES--*/
+.container .servicios-container {
+    width: 100%;
+    background: linear-gradient(135deg, var(--azul-fuerte), #29AC96);
+    color: white;
+}
+    /*--EXPERIENCE--*/
+.container .experiencia-container {
+    width: 100%;
+    background: linear-gradient(-135deg, #29AC96, var(--azul-claro));
+}
+    /*--FOOTER--*/
+footer {
+    background: var(--azul-fuerte);
+    color: white;
+}
+footer .footer-form .footer-name input,
+footer .footer-form .footer-email input,
+footer .footer-form .footer-message textarea {
+    background: none;
+}
+footer .footer-form p{
+    color: var(--azul-claro);
+}
+footer .footer-form .footer-button button{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    background: var(--azul-claro);
+    border: none;
+}
+/*--MOBILE FIRST--*/
+@media (min-width:320px) {
+    /*--HEADER--*/
+    header .menu-horizontal {
+        display: none;
+    }
+    /*--HERO--*/
+    .container .hero{
+        display: grid;
+        grid-template: 1fr 2fr / 100%;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .container .hero span{
+        text-align: center;
+        font-size: 25px;
+        margin: 0 10px;
+    }
+    .container .hero .hero-form{
+        border-radius: 15px;
+        margin-bottom: 15px;
+        width: 90%;
+        padding: 10px 0;
+        height: auto;
+    }
+    .container .hero .hero-form span {
+        font-size: 20px;
+    }
+    .container .hero .hero-form form{
+        width: 90%;
+        height: 350px;
+        display: grid;
+        grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+        grid-template-areas: 'name email' 'msg msg' 'btn btn';
+        justify-content: center;
+        align-items: center;
+    }
+    .container .hero .hero-form form .name-input{
+        grid-area: name;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: left;
+    }
+    .container .hero .hero-form form .email-input{
+        grid-area: email;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .container .hero .hero-form form .message-input{
+        grid-area: msg;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .container .hero .hero-form form .button-input{
+        grid-area: btn;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .container .hero .hero-form form .name-input input,
+    .container .hero .hero-form form .email-input input{
+        width: 90%;
+        height: 28px;
+        color: white;
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+    .container .hero .hero-form form .name-input p,
+    .container .hero .hero-form form .email-input p{
+        margin: 0;
+    }
+    .container .hero .hero-form .message-input p{
+        margin: 0;
+    }
+    .container .hero .hero-form .message-input textarea{
+        width: 95%;
+        color: white;
+        padding: 10px 5px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .container .hero .hero-form .button-input button {
+        padding: 18px 0;
+        width: 95%;
+        border-radius: 10px;
+    }
+    /*--SERVICES--*/
+    .container .servicios-container{
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr / 100%;
+        height: 100vh;
+    }
+    .container .servicios-container .serv-txt{
+        letter-spacing: 2px;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top:30px;
+        text-align: center;
+    }
+    .container .servicios-container figure .serv {
+        background: yellow;
+    }
+    /*--EXPERIENCE--*/
+    .container .experiencia-container{
+        height:100vh;
+    }
+    /*--FOOTER--*/
+    footer {
+        padding: 20px 0;
+<<<<<<< HEAD
+        height: 100vh;
+=======
+        height: 10s0vh;
+>>>>>>> a22fa457acd8632ad70da368d6f0f74a2d4936e5
+    }
+    footer .footer-txt{
+        font-family: 'Russo One', sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    footer .footer-form form{
+        width: 90%;
+        height: 320px;
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        grid-template-areas: 'fname femail' 'fmsg fmsg' 'fbtn fbtn';
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 50px;
+    }
+    footer .footer-form .footer-name{
+        grid-area: fname;
+        width: 100%;
+    }
+    footer .footer-form .footer-email{
+        grid-area: femail;
+        width: 100%;
+    }
+    footer .footer-form .footer-message{
+        grid-area: fmsg;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    footer .footer-form .footer-button{
+        grid-area: fbtn;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+    footer .footer-form .footer-name input,
+    footer .footer-form .footer-email input{
+        width: 89%;
+        height: 25px;
+        padding: 0 5px;
+        color: white;
+    }
+    footer .footer-form .footer-message textarea {
+        width: 91%;
+        padding: 10px;
+        color: white;
+    }
+    footer .footer-form .footer-name input,
+    footer .footer-form .footer-email input,
+    footer .footer-form .footer-message textarea {
+        border: 2px solid var(--azul-claro);
+    }
+    footer .footer-form .footer-button button{
+        width: 95%;
+        padding: 18px 0;
+        margin: 15px 0;
+        border-radius: 10px;
+    }
+    footer .footer-form .footer-button button:hover{
+        background: var(--gris-claro);
+        color: var(--azul-fuerte);
+    }
+    footer .footer-form .footer-button button:active{
+        background: #555555;
+    }
+    footer .footer-info{
+        margin-top: 8rem;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+    footer .footer-info span{
+        font-family: 'Russo One', sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+/*--TABLET--*/
+@media (min-width:760px) {
+    /*--HERO--*/
+    .container .hero .hero-form{
+        height: 480px;
+    }
+    .container .hero .hero-form span{
+        margin-bottom: 30px;
+        font-size: 25px;
+        text-align: justify;
+        width: 80%;
+        padding-left: 2rem;
+    }
+    .container .hero .hero-form form .name-input input,
+    .container .hero .hero-form form .email-input input{
+        width: 91%;
+        height: 2.5rem;
+        padding: 0 10px;
+    }
+    .container .hero .hero-form form .message-input{
+        margin: 20px 0;
+    }
+    .container .hero .hero-form form .message-input textarea{
+        width: 96%;
+        padding: 10px;
+    }
+    .container .hero .hero-form form .button-input{
+        margin-bottom: 20px;
+    }
+    .container .hero .hero-form form .button-input button{
+        width: auto;
+        padding: 18px 32px;
+    }
+    /*--SERVICES--*/
+    .container .servicios-container{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        height: 80vh;
+    }
+    .container .servicios-container .serv-txt{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 5rem;
+        text-align: justify;
+    }
+    .container .servicios-container .serv-txt h2{
+        margin-left: 4rem;
+    }
+    /*--FOOTER--*/
+    footer .footer-txt {
+        text-align: justify;
+    }
+    footer .footer-txt span {
+        margin-left: 3rem;
+    }
+    footer .footer-info {
+        text-align: justify;
+    }
+    footer .footer-form .footer-name input,
+    footer .footer-form .footer-email input{
+        padding: 0 10px;
+        width: 92%;
+    }
+    footer .footer-form .footer-message{
+        margin: 30px 0;
+    }
+    footer .footer-form .footer-message textarea{
+        width: 96%;
+    }
+    footer .footer-form .footer-button button {
+        width: auto;
+        padding: 18px 32px;
+        border-radius: 15px;
+    }
+    footer .footer-info p{
+        margin-left: 3rem;
+    }
+}
+/*--DESKTOP--*/
+@media (min-width:1020px) {
+    /*--HEADER--*/
+    header {
+        justify-content: space-around;
+    }
+    header .menu-horizontal{
+        display: flex;
+    }
+    header .menu-horizontal li{
+        display: inline-block;
+    }
+    header .menu-horizontal li a{
+        color: var(--gris-claro);
+        text-decoration: none;
+        font-family: 'Russo One', sans-serif;
+        margin: 0 10px;
+    }
+    header .menu-horizontal li a:hover {
+        color: var(--azul-claro);
+    }
+    header .menu-horizontal li a:active {
+        color: white;
+    }
+    /*--HERO--*/
+    .container .hero{
+        grid-template: 1fr / 1fr 2fr;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+    .container .hero span {
+        font-size: 40px;
+        margin-left: 30px;
+        text-align: justify;
+    }
+    /*--SERVICIOS--*/
+    .container .servicios-container .serv-txt h2{
+        font-size: 40px;
+    }
+    /*--FOOTER--*/
+    footer span{
+        font-size: 40px;
+    }
+    footer .footer-info{
+        margin-top: 6rem;
+    }
+    footer .footer-info p{
+        font-size: 15px;
+    }
+    footer .footer-info span{
+        font-size: 20px;
+    }
+}
