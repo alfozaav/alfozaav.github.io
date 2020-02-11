@@ -115,7 +115,6 @@ footer .footer-form .footer-button button{
         grid-template: 1fr 2fr / 100%;
         justify-content: center;
         align-items: center;
-        height: 90vh;
     }
     .container .hero span{
         text-align: center;
@@ -198,7 +197,6 @@ footer .footer-form .footer-button button{
     .container .servicios-container{
         display: grid;
         grid-template: 1fr 1fr 1fr 1fr / 100%;
-        height: 100vh;
     }
     .container .servicios-container .serv-txt{
         letter-spacing: 2px;
@@ -212,16 +210,10 @@ footer .footer-form .footer-button button{
     }
     /*--EXPERIENCE--*/
     .container .experiencia-container{
-        height:100vh;
     }
     /*--FOOTER--*/
     footer {
         padding: 20px 0;
-<<<<<<< HEAD
-        height: 100vh;
-=======
-        height: 10s0vh;
->>>>>>> a22fa457acd8632ad70da368d6f0f74a2d4936e5
     }
     footer .footer-txt{
         font-family: 'Russo One', sans-serif;
