@@ -31,7 +31,7 @@ header h1 {
 }
 /*--HERO--*/
 .container .hero {
-    background-image: url(/img/fondo.jpg);
+    background-image: url(../img/fondo.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -207,7 +207,7 @@ footer .footer-form .footer-button button{
         text-align: center;
     }
     .container .servicios-container .serv {
-        background-image: url(/img/fav.png);
+        background-image: url(../img/fav.png);
         height: 100px;
         width: 100px;
         background-size: cover;
