@@ -103,13 +103,22 @@ footer .footer-form .footer-button button{
     background: var(--azul-claro);
     border: none;
 }
-/*--MOBILE FIRST--*/
+/*----------------------------------MOBILE FIRST-------------------------------------*/
 @media (min-width:320px) {
     /*--HEADER--*/
+    header {
+        border-bottom: 2px solid var(--azul-claro);
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
     header .menu-horizontal {
         display: none;
     }
     /*--HERO--*/
+    .container{
+        padding-top: 60px;
+    }
     .container .hero{
         display: grid;
         grid-template: 1fr 2fr / 100%;
@@ -338,7 +347,7 @@ footer .footer-form .footer-button button{
     }
 }
 
-/*--TABLET--*/
+/*------------------------------------TABLET---------------------------------------*/
 @media (min-width:760px) {
     /*--HERO--*/
     .container .hero .hero-form{
@@ -423,7 +432,7 @@ footer .footer-form .footer-button button{
         margin-left: 3rem;
     }
 }
-/*--DESKTOP--*/
+/*--------------------------------------DESKTOP--------------------------------*/
 @media (min-width:1020px) {
     /*--HEADER--*/
     header {
