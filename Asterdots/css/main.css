@@ -472,6 +472,10 @@ footer .footer-form .footer-button button{
     .container .servicios-container .serv-txt h2{
         font-size: 40px;
     }
+    /*--EXPERIENE--*/
+    .experiencia-container .experiencia-txt h2{
+        font-size: 40px;
+    }
     /*--FOOTER--*/
     footer span{
         font-size: 40px;
