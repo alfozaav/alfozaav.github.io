@@ -26,6 +26,9 @@ header {
     height: 4em;
     position: sticky;
 }
+header a{
+    text-decoration: none;
+}
 header h1 {
     color: var(--azul-claro);
 }
@@ -111,6 +114,7 @@ footer .footer-form .footer-button button{
         position: fixed;
         left: 0;
         top: 0;
+        box-shadow: #333333 0px 5px 20px;
     }
     header .menu-horizontal {
         display: none;
@@ -206,8 +210,10 @@ footer .footer-form .footer-button button{
     /*--SERVICES--*/
     .container .servicios-container{
         display: grid;
-        grid-template: 1fr 1fr 1fr 1fr / 100%;
+        grid-template: 100px 1fr 1fr 1fr / 100%;
         padding-bottom: 70px;
+        justify-items: center;
+        align-items: center;
     }
     .container .servicios-container .serv-txt{
         letter-spacing: 2px;
@@ -217,15 +223,24 @@ footer .footer-form .footer-button button{
     }
     .container .servicios-container .serv {
         background-image: url(../img/fav.png);
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
         background-size: cover;
         background-position: center;
         margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .servicios-container .serv span{
+        display: none;
+    }
+    .container .servicios-container .serv:hover {
+        background-image: url(../img/house.webp);
     }
     /*--EXPERIENCE--*/
     .experiencia-container {
-        padding-top: 30px;
+        padding-top: 80px;
         padding-bottom: 40px;
     }
     .experiencia-txt {
@@ -237,6 +252,7 @@ footer .footer-form .footer-button button{
     }
     .foto-container {
         display: grid;
+        width: 80%;
         grid-template-columns: repeat(auto-fill, 250px);
         gap: 5px;
         justify-content: center;
@@ -247,7 +263,6 @@ footer .footer-form .footer-button button{
         padding: 10px;
         background: #f2f2f2;
     }
-
     .item img{
         max-width: 100%;
     }
@@ -266,11 +281,13 @@ footer .footer-form .footer-button button{
     /*--FOOTER--*/
     footer {
         padding: 20px 0;
+        border-top: 2px solid white;
     }
     footer .footer-txt{
         font-family: 'Russo One', sans-serif;
         font-size: 25px;
         text-align: center;
+        margin-top: 30px;
     }
     footer .footer-form form{
         width: 90%;
@@ -488,5 +505,11 @@ footer .footer-form .footer-button button{
     }
     footer .footer-info span{
         font-size: 20px;
+    }
+}
+@media (min-width:1500px) {
+    .container .servicios-container .serv{
+        height: 300px;
+        width: 300px;
     }
 }
