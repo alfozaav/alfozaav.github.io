@@ -330,11 +330,14 @@ footer .footer-form .footer-button button{
     }
     footer .footer-txt .social-media {
         margin: 0;
-        width: 70%;
+        width: 40%;
         grid-area: social-media;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        border: 1.5px solid var(--azul-claro);
+        border-radius: 20px;
+        padding: 3px 6px;
     }
     footer .footer-txt .social-media #yt{
         width: 25px;
@@ -520,6 +523,8 @@ footer .footer-form .footer-button button{
         margin-top: 10px;
         width: 70%;
         grid-area: social-media;
+        padding: 0;
+        border: none;
     }
     footer .footer-txt .social-media #yt{
         width: 30px;
