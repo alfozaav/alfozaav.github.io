@@ -87,6 +87,17 @@ header h1 {
     width: 100%;
     background: linear-gradient(-135deg, #29AC96, var(--azul-claro));
 }
+/*--ABOUT--*/
+.container .about-container {
+    width: 100%;
+    background: linear-gradient(135deg, var(--azul-claro), white);
+}
+.container .about-container .about {
+    width: 80%;
+}
+.container .about-container .about h2{
+    color: white;
+}
     /*--FOOTER--*/
 footer {
     background: var(--azul-fuerte);
@@ -278,6 +289,25 @@ footer .footer-form .footer-button button{
     .level-3 {
         grid-row-end: span 1;
     }
+    /*--ABOUT--*/
+    .container .about-container .about{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .container .about-container .about h2{
+        color: white;
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .container .about-container .about p {
+        text-align: justify;
+        color: #333333;
+    }
+    .container .about-container .about img{
+        width: 100%;
+    }
     /*--FOOTER--*/
     footer {
         padding: 20px 0;
@@ -419,6 +449,26 @@ footer .footer-form .footer-button button{
     .experiencia-txt h2{
         padding-left: 3rem;
     }
+    /*--ABOUT--*/
+    .container .about-container .about {
+        display: grid;
+        grid-template: 40px 1fr / 1fr 1fr;
+        grid-template-areas: 'title title' 'txt img';
+        align-items: center;
+        justify-content: center;
+        grid-column-gap: 50px;
+        padding-top: 40px;
+    }
+    .container .about-container .about h2{
+        grid-area: title;
+        margin-bottom: 40px;
+    }
+    .container .about-container .about .txt {
+        grid-area: txt;
+    }
+    .container .about-container .about img {
+        grid-area: img;
+    }
     /*--FOOTER--*/
     footer .footer-txt {
         text-align: justify;
@@ -492,6 +542,10 @@ footer .footer-form .footer-button button{
     /*--EXPERIENE--*/
     .experiencia-container .experiencia-txt h2{
         font-size: 40px;
+    }
+    /*--ABOUT--*/
+    .container .about-container .about {
+        grid-template: 40px 1fr / 2fr 1fr;
     }
     /*--FOOTER--*/
     footer span{
