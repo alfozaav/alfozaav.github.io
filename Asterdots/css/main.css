@@ -566,4 +566,7 @@ footer .footer-form .footer-button button{
         height: 300px;
         width: 300px;
     }
+    .container .about-container .about p {
+        font-size: 20px;
+    }
 }
