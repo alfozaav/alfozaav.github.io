@@ -82,11 +82,7 @@ header h1 {
     background: linear-gradient(135deg, var(--azul-fuerte), #29AC96);
     color: white;
 }
-    /*--EXPERIENCE--*/
-.container .experiencia-container {
-    width: 100%;
-    background: linear-gradient(-135deg, #29AC96, var(--azul-claro));
-}
+
 /*--ABOUT--*/
 .container .about-container {
     width: 100%;
@@ -233,9 +229,6 @@ footer .footer-form .footer-button button{
         text-align: center;
     }
     .container .servicios-container .serv {
-        background-image: url(../img/fav.png);
-        height: 200px;
-        width: 200px;
         background-size: cover;
         background-position: center;
         margin: 40px 0;
@@ -243,51 +236,78 @@ footer .footer-form .footer-button button{
         align-items: center;
         justify-content: center;
     }
+    .container .servicios-container #desarrollo{
+        background-image: url(../img//mkt.png);
+    }
+    .container .servicios-container #brand{
+        background-image: url(../img/brand.png);
+    }
+    .container .servicios-container #mkt{
+        background-image: url(../img//mkt.png);
+    }
     .container .servicios-container .serv span{
         display: none;
     }
     .container .servicios-container .serv:hover {
         background-image: url(../img/house.webp);
     }
-    /*--EXPERIENCE--*/
-    .experiencia-container {
-        padding-top: 80px;
-        padding-bottom: 40px;
-    }
-    .experiencia-txt {
-        color: white;
-        font-size: 20px;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
+    /*--PORTFOLIO PAGE--*/
+    .container .portfolio-container {
+        background: var(--gris-claro);
+        width: 100%;
         text-align: center;
+        padding: 30px 0;
     }
-    .foto-container {
-        display: grid;
+    .container .portfolio-container h1{
+        color: var(--azul-fuerte);
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+    .container .portfolio-container .project-card {
+        width: 90%;
+        height: auto;
+        background: white;
+        box-shadow: 0 3px 30px #555555;
+        border-radius: 10px;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .container .portfolio-container .project-card .project-title{
+        display: flex;
+        flex-flow: column;
         width: 80%;
-        grid-template-columns: repeat(auto-fill, 250px);
-        gap: 5px;
-        justify-content: center;
     }
-
-    .item {
-        border-radius: 5px;
-        padding: 10px;
-        background: #f2f2f2;
+    .container .portfolio-container .project-card .project-title span{
+        color: #777777;
+        text-align: justify;
+        margin: 0;
+        font-weight: bold;
     }
-    .item img{
-        max-width: 100%;
+    .container .portfolio-container .project-card .project-title h2{
+        padding: 0;
+        margin: 0;
+        font-size: 50px;
+        letter-spacing: 10px;
+        color: #333333;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        align-self: start;
+        display: inline-block;
+        margin: 0;
     }
-
-    .level-1 {
-        grid-row-end: span 3;
+    .container .portfolio-container .project-card img{
+        width: 80%;
     }
-
-    .level-2 {
-        grid-row-end: span 2;
+    .container .portfolio-container .project-card p{
+        text-align: justify;
+        width: 80%;
+        margin-bottom: 30px;
+        color: #222222;
+        font-size: 18px;
     }
-
-    .level-3 {
-        grid-row-end: span 1;
+    .container .portfolio-container .project-card p a{
+        color: #777777;
+        font-size: 16px;
     }
     /*--ABOUT--*/
     .container .about-container .about{
@@ -473,12 +493,30 @@ footer .footer-form .footer-button button{
     .container .servicios-container .serv-txt h2{
         margin-left: 6rem;
     }
-    /*--EXPERIENCE--*/
-    .experiencia-txt {
-        text-align: justify;
+    /*--PORTFOLIO PAGE--*/
+    .container .portfolio-container .project-card{
+        display: grid;
+        grid-template: 1fr 2fr / 1fr 2fr;
+        grid-template-areas: 'img title' 'img txt';
+        align-items: center;
+        justify-content: center;
     }
-    .experiencia-txt h2{
-        padding-left: 6rem;
+    .container .portfolio-container .project-card img{
+        grid-area: img;
+        width: 100%;
+        margin: 0 30px;
+
+    }
+    .container .portfolio-container .project-card .project-title{
+        grid-area: title;
+        align-self: end;
+    }
+    .container .portfolio-container .project-card .project-title h2{
+        font-size: 40px;
+    }
+    .container .portfolio-container .project-card p{
+        grid-area: txt;
+        font-size: 16px;
     }
     /*--ABOUT--*/
     .container .about-container .about{
@@ -596,9 +634,17 @@ footer .footer-form .footer-button button{
     .container .servicios-container .serv-txt h2{
         font-size: 40px;
     }
-    /*--EXPERIENE--*/
-    .experiencia-container .experiencia-txt h2{
-        font-size: 40px;
+    /*--PORTFOLIO PAGE--*/
+    .container .portfolio-container .project-card .project-title span{
+        font-size: 20px;
+    }
+    .container .portfolio-container .project-card .project-title h2{
+        font-size: 50px;
+        letter-spacing: 20px;
+    }
+    .container .portfolio-container .project-card p{
+        font-size: 23px;
+        align-self: start;
     }
     /*--ABOUT--*/
     .container .about-container .about {
