@@ -10,6 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="hamburger-menu" id="ham-menu">
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">SERVICIOS</a></li>
+                        <li><a href="#">PORTAFOLIO</a></li>
+                        <li><a href="#">NOSOTROS</a></li>
+                        <li><a href="#">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <a href="#"><h1>ASTERDOTS</h1></a>
         <nav class="menu-horizontal">
@@ -20,6 +34,10 @@
                 <li><a href="#contact-page">CONTACTO</a></li>
             </ul>
         </nav>
+        <div class="header__menu--wrapper">
+            <input type="checkbox" class="toggler" id="shutter" onclick="hide()">
+            <div class="hamburger" id="hamburger"><div></div></div>
+        </div>
     </header>
     <main class="container">
         <div class="hero">

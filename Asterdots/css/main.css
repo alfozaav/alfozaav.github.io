@@ -126,6 +126,116 @@ footer .footer-form .footer-button button{
     header .menu-horizontal {
         display: none;
     }
+   /*--Hamburguer Menu*-*/
+   .header__menu--wrapper {
+       background: white;
+       margin-top: 40px;
+   }
+   .header__menu--wrapper .toggler {
+       position: absolute;
+       top: 0;
+       right: 0;
+       cursor: pointer;
+       width: 50px;
+       height: 50px;
+       margin-top: 5px;
+       margin-right: 15px;
+       opacity: 0;
+       z-index: 2;
+   }
+   .header__menu--wrapper .hamburger{
+       position: absolute;
+       top: 0;
+       right: 0;
+       z-index: 1;
+       width: 60px;
+       height: 60px;
+       padding: 1rem;
+       margin-right: 11px;
+       box-sizing: border-box;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   .header__menu--wrapper .hamburger > div {
+       position: relative;
+       width: 100%;
+       height: 2px;
+       background: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all 0.4s ease;
+   }
+   .header__menu--wrapper .hamburger > div:before,
+   .header__menu--wrapper .hamburger > div:after {
+       content: ' ';
+       position: absolute;
+       z-index: 1;
+       top: -10px;
+       width: 100%;
+       height: 2.5px;
+       background: inherit;
+   }
+   .header__menu--wrapper .hamburger > div:after {
+       top: 10px;
+   }
+   /*--Toggler Animate-*/
+   .header__menu--wrapper .toggler:checked + .hamburger > div {
+       transform: rotate(135deg);
+   }
+   .header__menu--wrapper .toggler:checked + .hamburger > div:before,
+   .header__menu--wrapper .toggler:checked + .hamburger > div:after {
+       top: 0;
+       transform: rotate(90deg);
+   }
+   /*Rotate on hover when checked*/
+   .header__menu--wrapper .toggler:checked:hover + .hamburger > div {
+       transform: rotate(225deg);
+   }
+   /*--Menu Links--*/
+   .header__menu--wrapper .menu {
+       position: fixed;
+       top: 0;
+       right: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   .hamburger-menu {
+       background: rgba(50,50,50,0.9);
+       position: absolute;
+       width: 100%;
+       height: 100vh;
+       top: 67px;
+       z-index: 1;
+       visibility: hidden;
+       overflow: hidden;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   .hamburger-menu .menu li{
+       margin: 30px 0;
+       width: 100%;
+       list-style: none;
+       text-align: center;
+   }
+   .hamburger-menu .menu a {
+       font-size: 30px;
+       color: var(--gris-claro);
+       text-decoration: none;
+   }
+   .hamburger-menu .menu a:hover{
+       color: white;
+   }
+   .hamburger-menu .menu a:active{
+    color: white;
+}
+   .header__menu--wrapper .toggler:checked ~ .hamburger-menu {
+        visibility: visible;
+   }
+}
     /*--HERO--*/
     .container{
         padding-top: 60px;
@@ -194,6 +304,7 @@ footer .footer-form .footer-button button{
         color: white;
         padding: 0 5px;
         margin-bottom: 10px;
+        outline: none;
     }
     .container .hero .hero-form form .name-input p,
     .container .hero .hero-form form .email-input p{
@@ -208,11 +319,13 @@ footer .footer-form .footer-button button{
         padding: 10px 5px;
         margin: 0;
         margin-bottom: 10px;
+        outline: none;
     }
     .container .hero .hero-form .button-input button {
         padding: 18px 0;
         width: 95%;
         border-radius: 10px;
+        outline: none;
     }
     /*--SERVICES--*/
     .container .servicios-container{
@@ -407,11 +520,13 @@ footer .footer-form .footer-button button{
         height: 25px;
         padding: 0 5px;
         color: white;
+        outline: none;
     }
     footer .footer-form .footer-message textarea {
         width: 91%;
         padding: 10px;
         color: white;
+        outline: none;
     }
     footer .footer-form .footer-name input,
     footer .footer-form .footer-email input,
@@ -423,6 +538,7 @@ footer .footer-form .footer-button button{
         padding: 18px 0;
         margin: 15px 0;
         border-radius: 10px;
+        outline: none;
     }
     footer .footer-form .footer-button button:hover{
         background: var(--gris-claro);
@@ -442,7 +558,7 @@ footer .footer-form .footer-button button{
         font-size: 14px;
         letter-spacing: 1px;
     }
-}
+
 
 /*------------------------------------TABLET---------------------------------------*/
 @media (min-width:760px) {
@@ -500,6 +616,7 @@ footer .footer-form .footer-button button{
         grid-template-areas: 'img title' 'img txt';
         align-items: center;
         justify-content: center;
+        width: 70%;
     }
     .container .portfolio-container .project-card img{
         grid-area: img;
@@ -603,6 +720,9 @@ footer .footer-form .footer-button button{
     header .menu-horizontal{
         display: flex;
     }
+    .header__menu {
+        display: none
+    }
     header .menu-horizontal li{
         display: inline-block;
     }
@@ -617,6 +737,12 @@ footer .footer-form .footer-button button{
     }
     header .menu-horizontal li a:active {
         color: white;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .header__menu--wrapper{
+        display: none;
     }
     /*--HERO--*/
     .container .hero{
