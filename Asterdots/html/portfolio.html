@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hamburger-menu" id="ham-menu">
+    <div class="hamburger-menu" id="ham-menu" onclick="hide()">
         <div class="menu">
             <div>
                 <div>
                     <ul>
-                        <li><a href="#">SERVICIOS</a></li>
-                        <li><a href="#">PORTAFOLIO</a></li>
-                        <li><a href="#">NOSOTROS</a></li>
-                        <li><a href="#">CONTACTO</a></li>
+                        <li><a href="../index.html#service-page" onclick="hide()">SERVICIOS</a></li>
+                        <li><a href="#" onclick="hide()">PORTAFOLIO</a></li>
+                        <li><a href="../index.html#about-page" onclick="hide()" >NOSOTROS</a></li>
+                        <li><a href="../index.html#contact-page" onclick="hide()">CONTACTO</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,10 +29,10 @@
         <a href="../index.html"><h1>ASTERDOTS</h1></a>
         <nav class="menu-horizontal">
             <ul>
-                <li><a href="#service-page">SERVICIOS</a></li>
+                <li><a href="../index.html#service-page">SERVICIOS</a></li>
                 <li><a href="#">PORTAFOLIO</a></li>
-                <li><a href="#about-page">NOSOTROS</a></li>
-                <li><a href="#contact-page">CONTACTO</a></li>
+                <li><a href="../index.html#about-page">NOSOTROS</a></li>
+                <li><a href="../index.html#contact-page">CONTACTO</a></li>
             </ul>
         </nav>
         <div class="header__menu--wrapper">
@@ -62,7 +62,7 @@
                 <a href="https://www.facebook.com/asterdots/" target="_blank"> <img src="../img/fb.png" alt="" id="fb"> </a>
             </div>
         </div>
-        <!-- <div class="footer-form">
+         <div class="footer-form">
             <form action="">
                 <div class="footer-name">
                     <p>Nombre</p>
@@ -80,7 +80,7 @@
                     <button>ENVIAR</button>
                 </div>
             </form>
-        </div> -->
+        </div> 
        <div class="footer-info"> <p><span>ASTERDOTS 2020&copy;. </span>  All rights reserved.</p></div>
        <script src="../js/app.js"></script>
     </footer>    

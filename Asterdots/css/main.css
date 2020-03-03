@@ -548,7 +548,9 @@ footer .footer-form .footer-button button{
         background: #555555;
     }
     footer .footer-info{
-        margin-top: 8rem;
+        position: relative;
+        bottom: -40px;
+        margin-top: 2rem;
         font-size: 12px;
         width: 100%;
         text-align: center;
@@ -558,7 +560,15 @@ footer .footer-form .footer-button button{
         font-size: 14px;
         letter-spacing: 1px;
     }
-
+    .footer__contact--info {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer__contact--info p{
+        margin: 20px 0;
+    }
 
 /*------------------------------------TABLET---------------------------------------*/
 @media (min-width:760px) {
