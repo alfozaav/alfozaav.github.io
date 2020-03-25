@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+
+$coral: #F29580;
+$marino: #141726;
+$oswald: 'Oswald', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.footer {
+    background: #141726;
+    border-top: 2px solid $coral;
+    position: relative;
+    bottom: 0;
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    @include flex(column, center, center)
+     a, p{
+        color: $coral;
+        text-decoration: none;
+    }
+}

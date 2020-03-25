@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+
+@import "components/header";
+@import "components/footer";
+@import "components/main-home";
+@import "components/carousel";
+@import "components/register";
+@import "components/biografy";
+@import "components/sesion";
+
+$coral: #F29580;
+$marino: #141726;
+$verde-fuerte: #2A8C70;
+$verde-claro: #34BF98;
+$morado: #4E2559;
+$oswald: 'Oswald', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+body {
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    margin: 0;
+    font-family: $oswald;
+    letter-spacing: 2px;
+}
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}

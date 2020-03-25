@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+
+$coral: #F29580;
+$marino: #141726;
+$verde-fuerte: #2A8C70;
+$verde-claro: #34BF98;
+$morado: #4E2559;
+$oswald: 'Oswald', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.register {
+    background-color: $marino;
+    width: 100%;
+    height: auto;
+    @include flex(column, center, center);
+    .register__container {
+        width: 90%;
+        height: auto;
+        margin: 50px 0;
+        @include flex(column, center, center);
+        h2 {
+            color: $coral;
+            font-size: 48px;
+            margin: 50px 0;
+        }
+        @media screen and (min-width: 1020px) {
+            width: 400px;
+            border: 2px solid $coral;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        form {
+            @include flex(column, center, center);
+            width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+            input {
+                background: $marino;
+                border: none;
+                border-bottom: 2px solid $coral;
+                width: 100%;
+                height: 30px;
+                color: $verde-claro;
+                margin: 20px 0;
+                outline: none;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            ::placeholder {
+                color: $verde-claro;
+                font-family: $oswald;
+                font-size: 16px;
+            }
+            p {
+                color: #777777;
+                font-family: $roboto;
+                font-size: 12px;
+            }
+            button {
+                background: $verde-claro;
+                width: 100%;
+                padding: 18px 0;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 30px;
+                margin-top: 80px;
+                color: $marino;
+                font-family: $oswald;
+                font-size: 16px;
+                cursor: pointer;
+                @media screen and (min-width: 720px){
+                    width: auto;
+                    padding: 12px 32px;
+                }
+            }
+            button:hover {
+                background: $verde-fuerte;
+                color: white;
+            }
+        }
+    }
+}

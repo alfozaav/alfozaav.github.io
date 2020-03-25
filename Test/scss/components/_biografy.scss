@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+
+$coral: #F29580;
+$marino: #141726;
+$verde-fuerte: #2A8C70;
+$verde-claro: #34BF98;
+$morado: #4E2559;
+$oswald: 'Oswald', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.biografy__container {
+    background: $coral;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 30px 0;
+    box-sizing: border-box;
+    @media screen and (min-width: 2500px) {
+        height: 90vh;
+    }
+}
+.biografy {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: auto;
+    @include flex(column, center, space-between)
+    h2 {
+        color: $morado;
+        font-family: $oswald;
+        font-size: 36px;
+        align-self: start;
+    }
+    p {
+        color: $marino;
+        font-family: $roboto;
+        font-size: 16px;
+        text-align: justify;
+    }
+    @media screen and (min-width: 700px) {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    @media screen and (min-width: 1020px) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        width: 800px;
+        padding: 50px;
+        box-sizing: border-box;
+        border-radius: 50px;
+        border: 2px solid white;
+    }
+}
+.biografy--image {
+    width: 150px;
+    object-fit: cover; //Para que la imagen no de distorsione al agregar un ancho y alto
+    border-radius: 25px;
+    margin: 20px 0 30px 0;
+    @media screen and (min-width: 700px) {
+        width: 250px;
+        margin: 30px 0 60px 0;
+    }
+}
